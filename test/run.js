@@ -12,11 +12,15 @@ module.exports = async function run(app, func) {
     (async () => {
       try {
         await promisify((callback) => server.listen(callback))();
-        const { port } = server.address();
+        const { port } = /** @type {import('net').AddressInfo} */ (
+          server.address()
+        );
         await func(`http://127.0.0.1:${port}`);
       } finally {
         if (server.listening) {
-          await promisify((callback) => server.close(callback))();
+          await promisify((callback) =>
+            server.close(/** @type {(err?: Error) => void} */ (callback))
+          )();
         }
       }
     })(),
