@@ -1,6 +1,6 @@
 # koa-undici-proxy
 
-[![Node.js CI](https://github.com/SyaOS/koa-undici-proxy/actions/workflows/ci.yml/badge.svg)](https://github.com/SyaOS/koa-undici-proxy/actions/workflows/ci.yml)
+[![Node.js CI](https://github.com/SyaOS/koa-undici-proxy/actions/workflows/ci.yaml/badge.svg)](https://github.com/SyaOS/koa-undici-proxy/actions/workflows/ci.yaml)
 
 Yet another Koa proxy based on [undici](https://undici.nodejs.org/).
 
